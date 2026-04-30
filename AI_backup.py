@@ -18,7 +18,9 @@ while True:
         print(datetime.now().strftime("%H:%M:%S"))
     elif user == "date":
         print(date.today())
+        os.system("help")
     elif user == "help":
+        print("Commands:")
         print("time - current time")
         print("date - current day")
         print("edit ai - edit assistant")
@@ -35,7 +37,7 @@ while True:
     elif user == "update":
         os.system("apt update && apt upgrade ")
     elif user == "exit":
-        print("SYSTEM SHUTDOWN")
+        print("system shutdown")
         break
     else:
-        print("ERROE — SOMETHING WENT WRONG")
+        print("Error — something went wrong")
