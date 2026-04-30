@@ -1,0 +1,10 @@
+.bash_history
+.gitconfig
+.lesshst
+.python_history
+.ssh/
+.config/
+storage/
+downloads/
+test.py
+AI_backup.py
