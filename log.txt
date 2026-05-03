@@ -1,0 +1,8 @@
+update
+date
+time
+help
+file
+data.txt
+file
+exit
