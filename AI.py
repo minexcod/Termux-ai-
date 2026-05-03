@@ -2,15 +2,31 @@ from datetime import datetime, date
 import os
 
 def make_file():
-    a = input("file name ? ")
-    os.system("nano " + a)
+    try:
+        a = input("file name ? ")
+        if a == "":
+            print("firs give me a name")
+        else:
+            os.system("nano " + a)
+    except:
+        print("SOMETHING WENT WRONG!")
 
 def pkginstall():
-    b = input("pkg name ? ")
-    os.system("pkg install " + b)
+    try:
+        b = input("pkg name? ")
+        if b == "":
+            print("firs give me a name")
+        else:
+            os.system("pkg install " + b)
+    except:
+        print("SOMETHING WENT WRONG!")
 
 while True:
-    user = input("Command: ").lower()
+    user = input("Command: ").lower().strip()
+
+    f = open("log.txt","a")
+    f.write(user + "\n")
+    f.close()
 
     if user == "edit ai":
         os.system("nano AI.py")
